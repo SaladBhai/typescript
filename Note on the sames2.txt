@@ -1,0 +1,3 @@
+Union in typescript-
+Where we can store number or string
+let consume: number| string| boolean ='String in the world'
