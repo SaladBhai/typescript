@@ -1,3 +1,58 @@
 Union in typescript-
 Where we can store number or string
 let consume: number| string| boolean ='String in the world'
+=============================
+
+Type alias-
+
+type Person ={
+name :string;
+age: number;
+
+let person :Person
+or 
+let person :Person[];
+
+====================
+the type fearure does not have it in javascript, this is solely feature of typre script
+
+
+function add(a: number ,b : number ){
+return a+b;
+}
+here inference at its play, meaning the return type is number due to inference, that is function is assuming the function's return type is going to be a number.
+
+or something like you do this 
+function add(a:number, b: number) : number{
+return a+b;
+}
+
+==============================
+Generic feature 
+
+functiom addInitialArray( array: any[], value : any){
+{
+newArray = [value, ...array];
+return newArray;
+}
+addInitialArray([1,2,3],-1);
+
+const updatedArray = addInitialArray([1,2,3],-1);
+
+here we would get array of return type function as any but
+when accessing -
+updatedArray[0].split(' ');
+here we wont get anny error but the problem lies when we run the query it will trow error at the run time because to typescript this ooks alright.
+ to avoid that we use generic type,
+
+functiom addInitialArray<T>( array: any[], value : any){
+{
+newArray = [value, ...array];
+return newArray;
+}
+
+const updatedArray = addInitialArray([1,2,3],-1);
+updatedArray is showing number 
+and
+updatedArray[0].split(' ');
+this is throwing error
