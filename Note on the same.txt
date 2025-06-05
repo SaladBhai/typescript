@@ -1,0 +1,65 @@
+Typescript is super set of javascript.
+
+now javascript is dynamically typed where as typescript is statically typed thats where the name comes from.
+
+//primitive numbers, string boolean
+//Complex types are arrays and objects
+
+//Primitive
+
+let age:number;
+age=12;
+
+also we can write this as let age:number =12
+both types are allowed in type script.
+
+
+the type starts with lower case so that it identifies as type but if it tarts with upper case it will be taken as objects
+
+let name: string;
+name='Ayuh'
+
+let isStudent :boolean;
+isStudent =true;
+
+========
+
+// Complex types
+
+let hobbies :string[] //array of strings
+
+now we can declare a str8ings like
+
+hobbies =['ayush',''man']
+
+let person:any;
+
+person ={
+    name :'Max',
+    age:32
+}
+if you write 
+
+person ={
+    isStudent=true;
+}
+
+in this instance its allowed because we have written person :any which will allow any types of objects to form.
+
+set a type of the variable- type assignment, we are defining the structure of the objects.
+
+let people :{
+    name: string,
+    age:number
+}
+
+if want to makearray of objects then
+
+let people :{
+    name: string,
+    age:number
+}[];
+
+type INFERENCE-
+
+meaning
